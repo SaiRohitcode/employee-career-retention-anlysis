@@ -73,14 +73,6 @@ st.subheader("Promotion Gap Monitor")
 
 max_gap = float(df["PromotionGapRatio"].max())
 
-gap_threshold = st.sidebar.slider(
-    "Promotion Gap Threshold",
-    min_value=0.0,
-    max_value=max_gap,
-    value=0.0,
-    step=0.1
-)
-
 gap_df = filtered_df[
     filtered_df["PromotionGapRatio"] >= gap_threshold
 ]
@@ -102,7 +94,7 @@ else:
         gap_df[gap_columns],
         use_container_width=True
     )
-    
+
 # Retention Opportunity Panel
 st.header("Retention Opportunity Panel")
 retention_df = filtered_df[filtered_df["RetentionRisk"].isin(["Medium", "High"])]
