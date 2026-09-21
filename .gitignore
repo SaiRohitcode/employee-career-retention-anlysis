@@ -10,11 +10,6 @@ venv/
 .venv/
 env/
 
-# Data files
-data/*.csv
-data/*.xlsx
-data/*.xls
-
 # OS
 .DS_Store
 Thumbs.db
